@@ -6,7 +6,7 @@ Just a few things I'd like to try:
 - [x] use an archlinux container
 - [x] play with `git-lfs`
 - [x] setup ssh
-- [ ] deployment with rsync
+- [x] deployment with rsync
 
 ## Notes
 
