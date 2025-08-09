@@ -1,0 +1,3 @@
+baseURL = 'https://example.com/'
+languageCode = 'en-US'
+title = 'Example site'
