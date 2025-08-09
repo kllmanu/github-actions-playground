@@ -19,3 +19,10 @@ jobs:
       - name: Build project
         run: |
           echo "Building project on Arch Linux"
+          ls -la
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-build-artifact
+          path: images/
+          retention-days: 30
