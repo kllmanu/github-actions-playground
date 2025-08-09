@@ -33,4 +33,5 @@ jobs:
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
       - name: Deploy to remote server
         run: |
-          rsync -avz --delete public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/
+          # rsync -avz --delete public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/
+          echo "Deployment step is currently commented out for testing purposes."
