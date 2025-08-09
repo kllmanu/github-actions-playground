@@ -1,4 +1,5 @@
 name: arch
+
 on:
   push:
     branches:
