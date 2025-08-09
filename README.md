@@ -5,7 +5,7 @@ Just a few things I'd like to try:
 - [x] github actions in general
 - [x] use an archlinux container
 - [x] play with `git-lfs`
-- [ ] setup ssh
+- [x] setup ssh
 - [ ] deployment with rsync
 
 ## Notes
@@ -31,3 +31,5 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - still not that happy using yaml files :(
 - I prefer to run Arch instead of using actions from the marketplace
 - checking out LFS with `lfs: true` in order to work with the real files
+- had a lot of trial & errors with setting up ssh, the reason was the expansion of `~` in the container, which resulted in `Host key verification failed`, it looks like the environment of the ubuntu runner has no problems with it, but arch image is running as root in the container so I ended up with absolute paths `/root/.ssh`
+- doing things in the container need an additional 30 secs of running time, maybe installing the latest hugo from releases is the better option
