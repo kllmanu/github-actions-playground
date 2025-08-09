@@ -13,6 +13,7 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm git base-devel
+          pacman -S --noconfirm hugo rsync openssh
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project
