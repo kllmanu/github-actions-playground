@@ -14,8 +14,9 @@ Just a few things I'd like to try:
 
 https://www.atlassian.com/git/tutorials/git-lfs
 
-- `git lfs track images/*.webp` needs to be called for new files again
+- ~~`git lfs track images/*.webp` needs to be called for new files again~~
 - they will appear in `.gitattributes` once they are tracked
+- ok, it looks like I also just add a wildcard to `.gitattributes` myself and every subfolder can have its own attributes file
 - no need to add them to `.gitignore` just commit them as usual
 - while untracking works, it is a little bit tricky to delete the files from the storage itself,
   you also have to take [some additional steps](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)

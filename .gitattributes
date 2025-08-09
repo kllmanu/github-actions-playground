@@ -1,3 +1,1 @@
-images/annie-spratt-4TMBk-LqEKo-unsplash.jpg filter=lfs diff=lfs merge=lfs -text
-images/atlas-kadrow-4m93a-sZsDs-unsplash.jpg filter=lfs diff=lfs merge=lfs -text
-images/mikell-darling-0xOUy_nbsDY-unsplash.jpg filter=lfs diff=lfs merge=lfs -text
+images/*.jpg filter=lfs diff=lfs merge=lfs -text
