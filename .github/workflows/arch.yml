@@ -1,0 +1,21 @@
+name: I use Arch, btw
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+      options: --user root
+    steps:
+      - name: Install packages
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm git base-devel
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build project
+        run: |
+          echo "Building project on Arch Linux"

@@ -17,9 +17,11 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - they will appear in `.gitattributes` once they are tracked
 - no need to add them to `.gitignore` just commit them as usual
 - while untracking works, it is a little bit tricky to delete the files from the storage itself,
-you also have to take [some additional steps](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
-to remove all sensitive data or just delete the repository itself
+  you also have to take [some additional steps](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
+  to remove all sensitive data or just delete the repository itself
 
 ### Github Actions
 
 [![Foo](https://github.com/kllmanu/github-actions-playground/actions/workflows/foo.yml/badge.svg)](https://github.com/kllmanu/github-actions-playground/actions/workflows/foo.yml)
+
+- created my first action from github web, but workflow authoring from VS Code with the official extension seems to be the way to go
