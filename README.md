@@ -24,7 +24,8 @@ https://www.atlassian.com/git/tutorials/git-lfs
 
 ### Github Actions
 
-[![I use Arch, btw](https://github.com/kllmanu/github-actions-playground/actions/workflows/arch.yml/badge.svg)](https://github.com/kllmanu/github-actions-playground/actions/workflows/arch.yml)
+[![arch](https://github.com/kllmanu/github-actions-playground/actions/workflows/arch.yml/badge.svg)](https://github.com/kllmanu/github-actions-playground/actions/workflows/arch.yml)
+[![ubuntu](https://github.com/kllmanu/github-actions-playground/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/kllmanu/github-actions-playground/actions/workflows/ubuntu.yml)
 
 - created my first action from github web, but workflow authoring from VS Code with the official extension seems to be the way to go
 - just did a few commits to test it quickly, no issues whatsoever
