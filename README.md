@@ -8,9 +8,6 @@ Just a few things I'd like to try:
 - [ ] setup ssh
 - [ ] deployment with rsync
 - [ ] cache action to speed up pacman
-- [ ] an action or dedicated workflow to backup things
-- [ ] `git push` instead of rsync to deploy hugo ez pz
-- [ ] setup a `post-receive` hook to `git lfs pull` files
 
 ## Notes
 
