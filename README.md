@@ -33,3 +33,6 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - checking out LFS with `lfs: true` in order to work with the real files
 - had a lot of trial & errors with setting up ssh, the reason was the expansion of `~` in the container, which resulted in `Host key verification failed`, it looks like the environment of the ubuntu runner has no problems with it, but arch image is running as root in the container so I ended up with absolute paths `/root/.ssh`
 - doing things in the container need an additional 30 secs of running time, maybe installing the latest hugo from releases is the better option
+- and they have all kind of stuff preinstalled
+
+https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
