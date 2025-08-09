@@ -31,8 +31,6 @@ jobs:
       - name: Check remote host
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: hugo-site
-          path: public/
+      - name: Deploy to remote server
+        run: |
+          rsync -avz --delete public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/tmp/
