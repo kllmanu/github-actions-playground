@@ -30,4 +30,4 @@ jobs:
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
           # Add StrictHostKeyChecking=no for CI/CD reliability
-          ssh -i ~/.ssh/id_rsa -o "StrictHostKeyChecking=no" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
+          ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
