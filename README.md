@@ -36,3 +36,5 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - and they have all kind of stuff preinstalled
 
 https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
+
+- this is a good starting point to setup hugo https://gohugo.io/host-and-deploy/host-on-github-pages/

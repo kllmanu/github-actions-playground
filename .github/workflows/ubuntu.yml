@@ -6,13 +6,23 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.148.2"
+      HUGO_ENVIRONMENT: "production"
+      TZ: "Europe/Vienna"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           lfs: true
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Build project
+        run: echo "Building project..."
       - name: Setup SSH
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
