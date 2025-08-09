@@ -5,7 +5,12 @@ Just a few things I'd like to try:
 - [x] github actions in general
 - [x] use an archlinux container
 - [x] play with `git-lfs`
+- [ ] setup ssh
 - [ ] deployment with rsync
+- [ ] cache action to speed up pacman
+- [ ] an action or dedicated workflow to backup things
+- [ ] `git push` instead of rsync to deploy hugo ez pz
+- [ ] setup a `post-receive` hook to `git lfs pull` files
 
 ## Notes
 
@@ -28,3 +33,4 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - just did a few commits to test it quickly, no issues whatsoever
 - still not that happy using yaml files :(
 - I prefer to run Arch instead of using actions from the marketplace
+- checking out LFS with `lfs: true` in order to work with the real files
