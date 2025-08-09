@@ -7,7 +7,6 @@ Just a few things I'd like to try:
 - [x] play with `git-lfs`
 - [ ] setup ssh
 - [ ] deployment with rsync
-- [x] cache action to speed up pacman
 
 ## Notes
 
