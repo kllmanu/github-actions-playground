@@ -19,15 +19,10 @@ jobs:
         with:
           lfs: true
       - name: Build project
-        run: |
-          echo "Building project on Arch Linux"
+        run: echo "Building project..."
       - name: Setup SSH
         run: |
-          echo "Setting up SSH for deployment"
-          mkdir -p ~/.ssh
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
-          # Add StrictHostKeyChecking=no for CI/CD reliability
-          ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
