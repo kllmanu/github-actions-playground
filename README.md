@@ -27,3 +27,4 @@ https://www.atlassian.com/git/tutorials/git-lfs
 - created my first action from github web, but workflow authoring from VS Code with the official extension seems to be the way to go
 - just did a few commits to test it quickly, no issues whatsoever
 - still not that happy using yaml files :(
+- I prefer to run Arch instead of using actions from the marketplace
