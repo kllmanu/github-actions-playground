@@ -39,11 +39,4 @@ https://www.atlassian.com/git/tutorials/git-lfs
 https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md
 
 - this is a good starting point to setup hugo https://gohugo.io/host-and-deploy/host-on-github-pages/
-
-### Todo
-
-I should probably cache several things:
-
-- use `hugo build --cacheDir` and a github action to save/restore the cache
-- not sure about `--destination` if the `public/` directory should be cached as well?
-- maybe also cache `node_modules`
+- caching isn't worth it for my projects, as I don't use image processing and the few node modules are fast as well
