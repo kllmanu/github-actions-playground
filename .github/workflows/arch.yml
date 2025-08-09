@@ -28,4 +28,6 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
+          ssh -i ~/.ssh/id_rsa -o "UserKnownHostsFile=~/.ssh/known_hosts" ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
