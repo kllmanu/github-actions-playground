@@ -12,7 +12,7 @@ jobs:
       - name: Install packages
         run: |
           pacman -Syu --noconfirm
-          pacman -S --noconfirm git base-devel
+          pacman -S --noconfirm git git-lfs base-devel
           pacman -S --noconfirm hugo rsync openssh
       - name: Checkout code
         uses: actions/checkout@v4
