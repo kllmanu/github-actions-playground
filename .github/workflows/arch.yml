@@ -21,10 +21,11 @@ jobs:
       - name: Build project
         run: |
           echo "Building project on Arch Linux"
-          ls -la
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: my-build-artifact
-          path: images/
-          retention-days: 30
+      - name: Setup SSH
+        run: |
+          echo "Setting up SSH for deployment"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} hostnamectl
