@@ -9,6 +9,11 @@ jobs:
     container:
       image: archlinux:latest
     steps:
+      - name: Cache pacman packages
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/pacman/pkg
+          key: ${{ runner.os }}-pacman-${{ hashFiles('**/PKGBUILD') }}
       - name: Install packages
         run: |
           pacman -Syu --noconfirm
